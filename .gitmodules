@@ -1,0 +1,6 @@
+[submodule "services"]
+	path = services
+	url = https://github.com/MelodyBoard/services
+[submodule "clients/web"]
+	path = clients/web
+	url = https://github.com/MelodyBoard/web
