@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  services:
+    build: services
+    links:
+      - redis
+    ports:
+      - 8000
+
+  web:
+    build: clients/web
+    ports:
+      - 8080
+
+  nginx:
+    image: nginx
+    links:
+      - services
+      - web
+
+    ports:
+      - 80
+
+  redis:
+    image: redis
+    ports:
+      - 6379
