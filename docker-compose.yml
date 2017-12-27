@@ -59,7 +59,7 @@ services:
       - './services:/opt/services'
 
   web:
-    command: ./node_modules/.bin/nodemon npm start
+    command: npm run compose
     build: clients/web
 
     networks:
