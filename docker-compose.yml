@@ -7,9 +7,6 @@ services:
     networks:
       - melody
 
-    ports:
-      - 5432:5432
-
     environment:
       POSTGRES_USER: MelodyUser
       POSTGRES_PASSWORD: MelodyDevelopment
@@ -25,17 +22,11 @@ services:
     networks:
       - melody
 
-    ports:
-      - 6379:6379
-
   memcached:
     image: memcached
 
     networks:
       - melody
-
-    ports:
-      - 11211:11211
 
   services:
     command: bin/development-server
@@ -52,9 +43,6 @@ services:
     networks:
       - melody
 
-    ports:
-      - 8000:8000
-
     volumes:
       - './services:/opt/services'
 
@@ -64,9 +52,6 @@ services:
 
     networks:
       - melody
-
-    ports:
-      - 3030:3030
 
     volumes:
       - './clients/web:/opt/web'
