@@ -5,13 +5,13 @@ services:
     image: postgres
 
     networks:
-      - melody
+      - metanic
 
     environment:
       POSTGRES_USER: MelodyUser
       POSTGRES_PASSWORD: MelodyDevelopment
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_DB: melody
+      POSTGRES_DB: metanic
 
     volumes:
       - ./data:/var/lib/postgresql/data
@@ -20,13 +20,13 @@ services:
     image: redis
 
     networks:
-      - melody
+      - metanic
 
   memcached:
     image: memcached
 
     networks:
-      - melody
+      - metanic
 
   services:
     command: bin/development-server
@@ -38,10 +38,10 @@ services:
       - memcached:memcached
 
     environment:
-      - MELODY_SETTINGS_MODULE=melody.settings.compose
+      - MELODY_SETTINGS_MODULE=metanic.settings.compose
 
     networks:
-      - melody
+      - metanic
 
     volumes:
       - './services:/opt/services'
@@ -51,7 +51,7 @@ services:
     build: clients/web
 
     networks:
-      - melody
+      - metanic
 
     volumes:
       - './clients/web:/opt/web'
@@ -64,11 +64,11 @@ services:
       - web
 
     networks:
-      - melody
+      - metanic
 
     ports:
       - 8080:80
 
 networks:
-  melody:
+  metanic:
     driver: bridge

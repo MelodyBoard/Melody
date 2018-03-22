@@ -1,6 +1,6 @@
 [submodule "services"]
 	path = services
-	url = https://github.com/MelodyBoard/services
+	url = https://github.com/metanic/services
 [submodule "clients/web"]
 	path = clients/web
-	url = https://github.com/MelodyBoard/web
+	url = https://github.com/metanic/web
