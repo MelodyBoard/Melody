@@ -1,6 +1,9 @@
 # Python egg files
 *.egg-info
 
+# Redis databases
+*.rdb
+
 # Database data
 data/*
 *.sqlite3

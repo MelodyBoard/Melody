@@ -4,3 +4,6 @@
 [submodule "clients/web"]
 	path = clients/web
 	url = https://github.com/metanic/web
+[submodule "tools/polr"]
+	path = tools/polr
+	url = https://github.com/metanic/polr
