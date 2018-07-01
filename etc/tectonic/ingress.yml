@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+
+metadata:
+  namespace: metanic
+  name: ingress
+
+  annotations:
+    kubernetes.io/ingress.class: "tectonic"
+    ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/ssl-redirect: "true"
+    ingress.kubernetes.io/use-port-in-redirects: "true"
+
+spec:
+  rules:
+    - host: metanic.services
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: services
+              servicePort: 80
+
+    - host: metanic.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: web
+              servicePort: 80
+

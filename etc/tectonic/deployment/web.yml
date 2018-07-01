@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+
+metadata:
+  namespace: metanic
+  name: web
+
+  labels:
+    k8s-app: web
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      k8s-app: web
+
+  template:
+    metadata:
+      labels:
+        k8s-app: web
+
+    spec:
+      containers:
+        - name: web
+          image: metanic/web
+
+          ports:
+            - name: http
+              containerPort: 80
