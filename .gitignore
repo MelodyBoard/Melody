@@ -7,3 +7,10 @@
 # Database data
 data/*
 *.sqlite3
+
+# Log output
+*.log
+
+# Non-git hidden files
+.*
+!.git*
