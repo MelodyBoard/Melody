@@ -1,12 +1,15 @@
 [submodule "services"]
 	path = services
 	url = https://github.com/metanic/services
+
 [submodule "clients/web"]
 	path = clients/web
 	url = https://github.com/metanic/web
+
 [submodule "tools/mtc.sh"]
 	path = tools/mtc.sh
 	url = https://github.com/metanic/mtc.sh
+
 [submodule "fluence"]
 	path = tools/fluence
 	url = https://github.com/metanic/fluence
